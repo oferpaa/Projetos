@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <h3 class="pb-3 mb-4 font-italic border-bottom container">Blog</h3>
+    {% for post in posts %}
+        <div class="blog-post container">
+            <h2 class="blog-post-title">
+                <a href="/post/{{ post.pk }}">{{ post.title }}</a>
+            </h2>
+            <p class="blog-post-meta">{{ post.pub_date|date:'d, M Y' }} by {{ post.author }}</p>
+            {{ post.summary|safe }}
+            <br>
+        </div>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+        <div class="blog-post">
+            <h2 class="blog-post-title">{{ post.title }}</h2>
+            <p class="blog-post-meta">{{ post.pub_date|date:'d, M Y' }} by {{ post.author }}</p>
+
+            {{ post.content|safe }}
+        </div>
+
+        <footer class="blog-footer text-center">
+            <p><a href="/post/{{ post.pk }}">Back to top</a></p>
+        </footer>
+        
+{% endblock %}

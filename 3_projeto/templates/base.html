@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    {% include 'parciais/_head.html' %}
+    {% if title %}
+    <title>Task - {{ title }}</title>
+    {% else %}
+    <title>Task</title>
+    {% endif %}
+
+</head>
+
+<body>
+
+    <header class='site-header'>
+        {% include 'parciais/_nav.html' %}
+    </header>
+
+    <main class="container mt-4 mb-4">
+        {% include 'parciais/_messages.html' %}
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'parciais/_footer.html' %}
+
+</body>
+
+</html>

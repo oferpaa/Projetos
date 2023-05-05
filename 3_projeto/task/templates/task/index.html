@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card-columns">
+
+            {% for post in posts %}
+
+            <div class="card">
+
+                <div class="card-body">
+                    <div>
+                        <a class="mr-2" href="#">{{ post.author }}</a>
+                        <small class="text-muted">
+                            {{ post.data_post|date:'d / F / Y' }}
+                        </small>
+                    </div>
+                    <div>
+                        <small class="text-muted">
+                            {{ post.priority|capfirst }}
+                            | {{ post.status|capfirst }}
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="card-footer bg-transparent border-top-light-custom text-left">
+                    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                    <p class="article-content">{{ post.content }}</p>
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

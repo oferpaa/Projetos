@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <h1>Tarefas Pendentes:</h1>
+
+        <div class="card-body">
+            {% for task in tasks_pending %}
+            <div>
+                <a class="mr-2" href="#">{{ task.author }}</a>
+                <small class="text-muted">
+                    {{ task.data_post|date:'d / F / Y' }}
+                </small>
+            </div>
+            <div>
+                <small class="text-muted">
+                    {{ task.priority|capfirst }}
+                    | {{ task.status|capfirst  }}
+                </small>
+            </div>
+
+            <div class="card-footer bg-transparent border-top-light-custom text-left">
+                <h2><a class="article-title" href="#">{{ task.title }}</a></h2>
+                <p class="article-content">{{ task.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+<div class="form-group">
+    <label for="titulo">Título:</label>
+    <input type="text" class="form-control" id="titulo">
+</div>
+<div class="form-group">
+    <label for="conteudo">Conteúdo:</label>
+    <textarea class="form-control form-control-lg" id="conteudo" rows="5"></textarea>
+</div>
+<label for="prioridade">Prioridade:</label>
+<div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="prioridadeNovaTarefa1" name="prioridade" class="custom-control-input">
+    <label class="custom-control-label" for="prioridadeNovaTarefa1">Alta</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="prioridadeNovaTarefa2" name="prioridade" class="custom-control-input">
+    <label class="custom-control-label" for="prioridadeNovaTarefa2">Média</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="prioridadeNovaTarefa3" name="prioridade" class="custom-control-input">
+    <label class="custom-control-label" for="prioridadeNovaTarefa3">Baixa</label>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Criar Tarefa</button>
+</div>
